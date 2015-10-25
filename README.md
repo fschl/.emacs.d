@@ -1,0 +1,3 @@
+# fschl's emacs config
+
+my personal emacs configuration. needs to be made more portable and cleaned up some day...

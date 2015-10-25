@@ -1,0 +1,16 @@
+*~			# all emacs backup files
+\#*\#
+ac-comphist.dat
+/session.*
+/elpa/*
+/auto-save-list
+/.mc-lists.el
+/tramp
+/gotools
+bookmarks
+projectile*
+.sx/
+recentf
+*desktop.ini		# ugh, those MS files...
+/eshell/history
+/eshell/lastdir
