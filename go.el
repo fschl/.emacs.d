@@ -5,7 +5,7 @@
 
 (require 'go-mode)
 (load "~/.emacs.d/go-autocomplete.el")
-(load "~/projects/go-projects/src/golang.org/x/tools/cmd/oracle/oracle.el")
+;(load "~/projects/go-projects/src/golang.org/x/tools/cmd/oracle/oracle.el")
 
 (require 'go-autocomplete)
 (require 'auto-complete-config)
@@ -13,7 +13,7 @@
 ;; auto-format before save
 (add-hook 'before-save-hook 'gofmt-before-save)
 (add-hook 'go-mode-hook
-          'go-oracle-mode
+;          'go-oracle-mode
           'git-gutter-mode)
 
 (defun fschl-go-mode-keys ()

@@ -33,6 +33,14 @@
             (delete-trailing-whitespace)
             nil))
 
+
+;; load ErgoEmacs keybinding
+(setq ergoemacs-theme nil)
+(setq ergoemacs-keyboard-layout "de")
+(require 'ergoemacs-mode)
+(ergoemacs-mode 1) ;; turn on minor mode ergoemacs-mode
+
+
 ;; faster TRAMP
 (setq tramp-default-method "ssh")
 
@@ -44,8 +52,6 @@
            (while (pcomplete-here*
                    (funcall pcomplete-command-completion-function)
                    (pcomplete-arg 'last) t))))))
-
-(add-to-list 'load-path "~/.emacs.d/ergoemacs-keybindings")
 
 ;; some more eshell stuffs
 (defun fschl/eshell-here ()
@@ -100,8 +106,8 @@ If WINDOW is the only one in its frame, then `delete-frame' too."
   (delete-single-window))
 
 
-(require 'tex)
-(setq-default TeX-PDF-mode t)
+;;(require 'tex)
+;;(setq-default TeX-PDF-mode t)
 (require 'dired-details+)
 (require 'js2-mode)
 (require 'js2-refactor)
@@ -139,11 +145,6 @@ If WINDOW is the only one in its frame, then `delete-frame' too."
 (add-hook 'web-mode-hook  'fschl-web-mode-hook)
 (add-to-list 'auto-mode-alist '("\\.html\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.htm\\'" . web-mode))
-
-;; load ErgoEmacs keybinding
-(setenv "ERGOEMACS_KEYBOARD_LAYOUT" "de") ; DE
-(load "ergoemacs-mode.el")
-(ergoemacs-mode 1) ;; turn on minor mode ergoemacs-mode
 
 ;; H E L M stuffs
 (require 'helm)
@@ -293,7 +294,7 @@ If WINDOW is the only one in its frame, then `delete-frame' too."
 
 (diminish 'auto-complete-mode "AC")
 (diminish 'git-gutter-mode)
-(diminish 'go-oracle-mode)
+;(diminish 'go-oracle-mode)
 (diminish 'yas-minor-mode "Y")
 
 (add-hook 'js2-init-hook
